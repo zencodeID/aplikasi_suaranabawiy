@@ -32,4 +32,11 @@ TextStyle regularTextstyle = GoogleFonts.poppins(
   color: darkColor,
 );
 
+TextStyle redTextstyle = GoogleFonts.poppins(
+  fontWeight: FontWeight.w400,
+  color: redColor,
+);
+
 double edge = 24;
+
+  

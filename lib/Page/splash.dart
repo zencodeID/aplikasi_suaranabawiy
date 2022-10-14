@@ -1,6 +1,6 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
+// import 'package:suaranabawiy/Model/background.dart';
 import 'package:suaranabawiy/theme.dart';
 
 class SplashPage extends StatefulWidget {
@@ -31,6 +31,13 @@ class _SplashPageState extends State<SplashPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            // CustomPaint(
+            //   painter: BackgroundPainter(),
+            //   child: Container(
+            //     width: double.infinity,
+            //     height: double.infinity,
+            //   ),
+            // ),
             Container(
               height: 180,
               width: 180,
