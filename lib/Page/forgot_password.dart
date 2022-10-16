@@ -212,8 +212,6 @@ class _SignInPageState extends State<SignInPage> {
                 gravity: ToastGravity.BOTTOM,
                 toastDuration: Duration(seconds: 2),
               );
-            } else {
-              Navigator.pushNamed(context, '/navbar');
             }
           });
         },
