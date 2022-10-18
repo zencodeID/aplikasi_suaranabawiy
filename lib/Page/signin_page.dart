@@ -35,6 +35,7 @@ class _SignInPageState extends State<SignInPage> {
           passwordInput(),
           checkBoxRem(),
           loginButton(),
+          resetText(),
           Center(
             child: Container(
               margin: EdgeInsets.only(
@@ -278,9 +279,44 @@ class _SignInPageState extends State<SignInPage> {
             width: 2,
           ),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, '/sign-up');
+            },
             child: Text(
               'Register',
+              style: blueTextstyle.copyWith(
+                  fontSize: 16, fontWeight: FontWeight.bold),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget resetText() {
+    return Container(
+      margin: EdgeInsets.only(
+        top: 2,
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            "Forgot your account?",
+            style: greyTextStyle.copyWith(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(
+            width: 2,
+          ),
+          TextButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/resetpass');
+            },
+            child: Text(
+              'Reset',
               style: blueTextstyle.copyWith(
                   fontSize: 16, fontWeight: FontWeight.bold),
             ),

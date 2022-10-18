@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:suaranabawiy/theme.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-class SignInPage extends StatefulWidget {
-  const SignInPage({super.key});
+class SignUpPage extends StatefulWidget {
+  const SignUpPage({super.key});
 
   @override
-  State<SignInPage> createState() => _SignInPageState();
+  State<SignUpPage> createState() => _SignUpPageState();
 }
 
-class _SignInPageState extends State<SignInPage> {
+class _SignUpPageState extends State<SignUpPage> {
   late FToast fToast;
   final emailController = TextEditingController(text: "");
   final passwordController = TextEditingController(text: "");
@@ -31,10 +31,11 @@ class _SignInPageState extends State<SignInPage> {
         padding: EdgeInsets.symmetric(horizontal: 24),
         children: [
           title(),
+          nameInput(),
           emailInput(),
           passwordInput(),
-          checkBoxRem(),
-          loginButton(),
+          acceptBoxRem(),
+          registerButton(),
           Center(
             child: Container(
               margin: EdgeInsets.only(
@@ -50,8 +51,8 @@ class _SignInPageState extends State<SignInPage> {
               ),
             ),
           ),
-          loginWithGoogle(),
-          registerText(),
+          registerWithGoogle(),
+          signInText(),
         ],
       ),
     );
@@ -64,7 +65,7 @@ class _SignInPageState extends State<SignInPage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Login to your\naccount',
+            'Register for\nlistening',
             style: darkTextStyle.copyWith(
                 fontSize: 24, fontWeight: FontWeight.bold),
           ),
@@ -94,6 +95,24 @@ class _SignInPageState extends State<SignInPage> {
             ],
           )
         ],
+      ),
+    );
+  }
+
+  Widget nameInput() {
+    return Container(
+      margin: EdgeInsets.only(top: 48),
+      padding: EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: greyColor,
+        borderRadius: BorderRadius.circular(14),
+      ),
+      child: TextFormField(
+        controller: emailController,
+        decoration: InputDecoration.collapsed(
+          hintText: 'Full Name',
+          hintStyle: darkTextStyle.copyWith(fontSize: 16),
+        ),
       ),
     );
   }
@@ -157,7 +176,7 @@ class _SignInPageState extends State<SignInPage> {
     );
   }
 
-  Widget checkBoxRem() {
+  Widget acceptBoxRem() {
     return Container(
       margin: EdgeInsets.only(top: 32),
       child: Row(
@@ -181,14 +200,14 @@ class _SignInPageState extends State<SignInPage> {
             width: 12,
           ),
           Text(
-            'Remember Me',
+            'Saya menerima segala isi Syarat Penggunaanya dan\nKebijakan Privasi Suara Nabawiy',
           ),
         ],
       ),
     );
   }
 
-  Widget loginButton() {
+  Widget registerButton() {
     return Container(
       height: 50,
       width: double.infinity,
@@ -227,7 +246,7 @@ class _SignInPageState extends State<SignInPage> {
                 backgroundColor: greyColor,
               )
             : Text(
-                'Login',
+                'Register',
                 style: whiteTextStyle.copyWith(
                     fontSize: 18, fontWeight: FontWeight.bold),
               ),
@@ -235,7 +254,7 @@ class _SignInPageState extends State<SignInPage> {
     );
   }
 
-  Widget loginWithGoogle() {
+  Widget registerWithGoogle() {
     return Container(
       height: 50,
       width: double.infinity,
@@ -249,7 +268,7 @@ class _SignInPageState extends State<SignInPage> {
           ),
         ),
         child: Text(
-          'Login With Google',
+          'Register With Google',
           style:
               darkTextStyle.copyWith(fontSize: 18, fontWeight: FontWeight.bold),
         ),
@@ -257,7 +276,7 @@ class _SignInPageState extends State<SignInPage> {
     );
   }
 
-  Widget registerText() {
+  Widget signInText() {
     return Container(
       margin: EdgeInsets.only(
         top: 48,
@@ -266,7 +285,7 @@ class _SignInPageState extends State<SignInPage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            "Don't have an account ?",
+            "Do you have an account ?",
             style: greyTextStyle.copyWith(
               fontSize: 16,
               fontWeight: FontWeight.bold,
@@ -276,9 +295,11 @@ class _SignInPageState extends State<SignInPage> {
             width: 2,
           ),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, '/sign-in');
+            },
             child: Text(
-              'Register',
+              'Login',
               style: blueTextstyle.copyWith(
                   fontSize: 16, fontWeight: FontWeight.bold),
             ),

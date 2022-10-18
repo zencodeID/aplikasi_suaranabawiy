@@ -36,9 +36,9 @@ class _SplashPageState extends State<SplashPage> {
               end: Alignment.bottomLeft,
               stops: [0.1, 0.6, 0.9],
               colors: [
-                Color(0xff182848),
-                Color(0xff334C83),
                 Color(0xff4B6CB7),
+                Color(0xff334C83),
+                Color(0xff182848),
               ],
             ),
           ),
