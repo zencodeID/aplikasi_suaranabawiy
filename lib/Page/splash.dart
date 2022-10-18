@@ -29,6 +29,7 @@ class _SplashPageState extends State<SplashPage> {
       // backgroundColor: darkColor,
       body: Center(
         child: Container(
+          width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topRight,
