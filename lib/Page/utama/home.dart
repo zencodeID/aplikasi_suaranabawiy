@@ -25,46 +25,88 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
-          child: ListView(
+          // child: ListView(
+          //   children: [
+          //     Container(
+          //       margin: EdgeInsets.only(top: 90),
+          //       height: 211,
+          //       decoration: BoxDecoration(
+          //         image: DecorationImage(
+          //           image: AssetImage('images/sn.png'),
+          //         ),
+          //       ),
+          //     ),
+          //     SizedBox(
+          //       height: 12,
+          //     ),
+          //     Center(
+          //       child: Container(
+          //         height: 18,
+          //         width: 60,
+          //         color: redColor,
+          //         child: Text(
+          //           'Online',
+          //           style: whiteTextStyle.copyWith(
+          //             fontSize: 12,
+          //           ),
+          //         ),
+          //       ),
+          //     ),
+          //     Text('Habib Taufiq Assegaf'),
+          //     SizedBox(
+          //       height: 10,
+          //     ),
+          //     Text('Kalam Salam'),
+          //     SizedBox(
+          //       height: 10,
+          //     ),
+          //     SizedBox(
+          //       height: 10,
+          //     ),
+          //     Text(
+          //         "Kajian kitab  Ta’lim Wa Muta’alim Karya Syeikh Hasyim Asy’ari"),
+          //   ],
+          // ),
+          child: Column(
+            
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              // CustomPaint(
+              //   painter: BackgroundPainter(),
+              //   child: Container(
+              //     width: double.infinity,
+              //     height: double.infinity,
+              //   ),
+              // ),
               Container(
-                margin: EdgeInsets.only(top: 90),
-                height: 211,
+                height: 180,
+                width: 180,
+                margin: EdgeInsets.only(bottom: 50, top: 250),
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage('images/sn.png'),
                   ),
                 ),
               ),
-              SizedBox(
-                height: 12,
-              ),
-              Center(
-                child: Container(
-                  height: 18,
-                  width: 60,
-                  color: redColor,
-                  child: Text(
-                    'Online',
-                    style: whiteTextStyle.copyWith(
-                      fontSize: 12,
-                    ),
-                  ),
+              Text(
+                'SUARA NABAWIY 107.7 FM',
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  color: whiteColor,
                 ),
               ),
-              Text('Habib Taufiq Assegaf'),
               SizedBox(
-                height: 10,
-              ),
-              Text('Kalam Salam'),
-              SizedBox(
-                height: 10,
-              ),
-              SizedBox(
-                height: 10,
+                height: 20,
               ),
               Text(
-                  "Kajian kitab  Ta’lim Wa Muta’alim Karya Syeikh Hasyim Asy’ari"),
+                'Damaikan Hati ,  Sejukan Jiwa',
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                  color: whiteColor,
+                ),
+              ),
             ],
           ),
         ),

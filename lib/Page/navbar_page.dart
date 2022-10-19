@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:suaranabawiy/Page/utama/chat.dart';
+import 'package:suaranabawiy/Page/utama/atensi.dart';
 import 'package:suaranabawiy/Page/utama/editor.dart';
 import 'package:suaranabawiy/Page/utama/home.dart';
 import 'package:suaranabawiy/Page/utama/player.dart';
